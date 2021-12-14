@@ -32,8 +32,8 @@ spec:
               key: mongo-root-password
         - name: ME_CONFIG_MONGODB_ENABLE_ADMIN
           valueFrom: 
-            secretKeyRef:
-              name: mongodb-secret
+            configMapKeyRef:
+              name: mongodb-configmap
               key: mongo-enable-rootuser
         - name: ME_CONFIG_MONGODB_SERVER
           valueFrom: 
